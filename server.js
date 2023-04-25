@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const mysql = require('mysql2');
 const cfonts = require('cfonts');
 
-const connection = require('./config/connections.js');
-
 const routes = require('./routes');
 
 // cfonts allows usage of different styles "fonts", colors, spacing, etc. inside of the terminal. I'm using cfonts with node.

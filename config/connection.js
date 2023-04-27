@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: process.env.USER,
     password: process.env.PASSWORD,
-    database: ''
+    database: 'employee_tracker'
 }).promise();
 
 module.exports = connection;

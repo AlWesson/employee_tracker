@@ -17,7 +17,7 @@ connection.connect((err) => {
 });
 
 // cfonts allows usage of different styles "fonts", colors, spacing, etc. inside of the terminal. I'm using cfonts with node.
-cfonts.say(' EMPLOYEE TRACKER ' , {
+cfonts.say('EMPLOYEE|TRACKER' , {
     font: '3D', 
     align: 'left',
     colors: ['yellow', 'gray'],
@@ -26,7 +26,8 @@ cfonts.say(' EMPLOYEE TRACKER ' , {
     //gradient: ['yellow', '#3EB489'],
     env: 'node'
 });
-// 
+
+// initial user prompt 
 function initializePrompt() {
     inquirer.prompt({
         type: "list",
@@ -55,7 +56,7 @@ function initializePrompt() {
                 role.viewRoles();
                 break;
             case "View all employees":
-
+                employee.viewEmployees();
                 break;
             case "Add a department":
 
@@ -89,6 +90,6 @@ function initializePrompt() {
     
 }
 
-process.on("Exit", () => {
+process.on("exit", () => {
     connection.end();
 });

@@ -14,6 +14,7 @@ CREATE TABLE roles (
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(255),
     departmentID INT NOT NULL,
+    FOREIGN KEY (departmentID) REFERENCES departments(id),
     salary DECIMAL(10,2), -- The 10 in this parentheses is for the total number of digits, the 2 is for the nuber of digits after the decimal. ex: 0123456789.50 
     PRIMARY KEY (id)
 );

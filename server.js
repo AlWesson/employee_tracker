@@ -33,7 +33,7 @@ function initializePrompt() {
         type: "list",
         name: "choice",
         message: "What would you like do do?",
-        selecter: [
+        options: [
             "View all departments",
             "View all roles",
             "View all employees",
@@ -59,7 +59,7 @@ function initializePrompt() {
                 employee.viewEmployees();
                 break;
             case "Add a department":
-
+                department.addDepartment();
                 break;
             case "Add a role":
 
@@ -93,3 +93,5 @@ function initializePrompt() {
 process.on("exit", () => {
     connection.end();
 });
+
+module.exports = initializePrompt;

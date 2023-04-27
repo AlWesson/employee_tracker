@@ -1,6 +1,8 @@
+const inquirer = require('inquirer');
 const connection = require('../config/connection.js');
+const server = require('../server.js');
 
-function viewEmployees () {
+function viewEmployees() {
     const query = `SELECT employees.id, employees.firstName, employees.lastName, roles.title, departments.departmentTitle, roles.salary, 
                    CONCAT(manager.firstName,' ',manager.lastName) AS managerName
                    FROM employees
@@ -14,7 +16,7 @@ function viewEmployees () {
         };
         console.table(res);
 
-        initializePrompt();
+        server.initializePrompt();
     });
 }
 

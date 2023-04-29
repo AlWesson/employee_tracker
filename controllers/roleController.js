@@ -52,10 +52,11 @@ function addRole() {
             return res(err);
         };
         console.log( `Added role and salary to ${answer.dept} `);
+            server.initializePrompt();
         }
         );
     });
 
 });
 };
-module.exports = {viewRoles};
+module.exports = {viewRoles, addRole};

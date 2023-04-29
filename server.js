@@ -41,11 +41,7 @@ function initializePrompt() {
             "Add a role",
             "Add an employee",
             "Update an employee role",
-            "View employees by manager",
-            "View employees by department",
-            "Delete department, roles, and employees",
-            "View the total utilized budget of a department",
-            "Exit",
+          
         ],
     }).then((answer) => {
         switch (answer.choice) {
@@ -68,18 +64,6 @@ function initializePrompt() {
 
                 break;
             case "Update an employee role":
-
-                break;
-            case "View employees by manager":
-
-                break;
-            case "View employees by department":
-
-                break;
-            case "Delete department, roles, and employees":
-
-                break;
-            case "View the total utilized budget of a department":
 
                 break;
             case "Exit":

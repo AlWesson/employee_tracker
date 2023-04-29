@@ -18,16 +18,16 @@ function viewDepartments() {
 function addDepartment() {
     inquirer.prompt({
         type: "input",
-        name: "name",
+        name: "dName",
         message: "Enter in the department you would like to add."
     }).then((answer) => {
-        const query = `INSERT INTO departments (departmentTitle) VALUES ("${answer.name}")`;
+        const query = `INSERT INTO departments (departmentTitle) VALUES ("${answer.dName}")`;
         connection.query(query, (err, res) => {
             if(err) {
                 return res(err);
                 
             };
-            console.log(`The department ${answer.name} has been added.`);
+            console.log(`The department ${answer.dName} has been added.`);
             server.initializePrompt();
         });
     });

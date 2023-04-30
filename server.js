@@ -61,7 +61,7 @@ function initializePrompt() {
                 role.addRole();
                 break;
             case "Add an employee":
-
+                employee.addEmployee();
                 break;
             case "Update an employee role":
 

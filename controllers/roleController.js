@@ -14,7 +14,7 @@ function viewRoles() {
         server.initializePrompt();
     });
 }
-
+// function to add a role, the salary for that role, and in which department that role is being added to.
 function addRole() {
     const query = "SELECT * FROM departments";
     connection.query(query, (err, res) => {

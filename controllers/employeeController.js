@@ -78,4 +78,9 @@ function addEmployee() {
     });
 }
 
+// function to update an employees role.
+
+function updateERole() {
+    
+}
 module.exports = {viewEmployees, addEmployee};

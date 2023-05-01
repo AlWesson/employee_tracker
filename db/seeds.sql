@@ -18,9 +18,9 @@ VALUES
 ('Security Director', 195500.00, 6),
 ('Legal Manager', 95000.00, 7);
 
-INSERT INTO employees (firstName, lastName, roleID, managerID)
+INSERT INTO employees (firstName, lastName, roleID, managersID)
 VALUES
-('Diana', 'Diaz' 1, 1),
+('Diana', 'Diaz', 1, 1),
 ('Al', 'Hernandez', 2, 2),
 ('Samuel', 'McJonesifer', 3, 3),
 ('Christian', 'Garza', 4, 4),

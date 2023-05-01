@@ -1,17 +1,17 @@
-const inquirer = require('inquirer');
+/*const inquirer = require('inquirer');
 const connection = require('../config/connection.js');
-const server = require('../server.js');
+const { initializePrompt } = require('../server.js');
 
 function viewDepartments() {
     const query = 'SELECT * FROM departments';
     connection.query(query, (err, res) => {
         if(err) {
-            return res(err);
+            return err;
             
         };
         console.table(res);
 
-        server.initializePrompt();
+        initializePrompt();
     });
 }
 
@@ -24,13 +24,13 @@ function addDepartment() {
         const query = `INSERT INTO departments (departmentTitle) VALUES ("${answer.dName}")`;
         connection.query(query, (err, res) => {
             if(err) {
-                return res(err);
+                return err;
                 
             };
             console.log(`The department ${answer.dName} has been added.`);
-            server.initializePrompt();
+            initializePrompt();
         });
     });
 }
 
-module.exports = {viewDepartments, addDepartment};
+module.exports = {viewDepartments, addDepartment};*/

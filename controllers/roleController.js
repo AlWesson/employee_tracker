@@ -1,17 +1,17 @@
-const inquirer = require('inquirer');
+/*const inquirer = require('inquirer');
 const connection = require('../config/connection.js');
-const server = require('../server.js');
+const {initializePrompt} = require('../server.js');
 
 function viewRoles() {
     const query = 'SELECT roles.title, roles.id, department.departmentTitle, roles.salary FROM roles JOIN departments ON roles.departmentID = departments.id;';
     connection.query(query, (err, res) => {
         if(err) {
-            return res(err);
+            return err;
             
         };
         console.table(res);
 
-        server.initializePrompt();
+        initializePrompt();
     });
 }
 // function to add a role, the salary for that role, and in which department that role is being added to.
@@ -19,7 +19,7 @@ function addRole() {
     const query = "SELECT * FROM departments";
     connection.query(query, (err, res) => {
         if(err) {
-            return res(err);
+            return err;
         };
     inquirer.prompt([
         {
@@ -36,7 +36,7 @@ function addRole() {
         type: "list",
         name: "department",
         message: "Choose the department for this role.",
-        options: res.map((dept) => dept.departmentTitle),
+        choices: res.map((dept) => dept.departmentTitle),
         },
     ]).then((answer) => {
         const dept = res.find(
@@ -49,14 +49,14 @@ function addRole() {
         },
         function (err, res){
         if(err) {
-            return res(err);
+            return err;
         };
         console.log( `Added role and salary to ${answer.dept} `);
-            server.initializePrompt();
+            initializePrompt();
         }
         );
     });
 
 });
 };
-module.exports = {viewRoles, addRole};
+module.exports = {viewRoles, addRole};*/

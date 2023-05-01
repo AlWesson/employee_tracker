@@ -8,6 +8,10 @@
 
   employee_tracker is an employee database using SQL. Users can view all departments, view all roles, and view all employees stored in the database. The user can also add ot each of the categories as well as update already existing empoyees.
 
+  ![alt text](https://raw.githubusercontent.com/AlWesson/employee_tracker/master/Assets/eT_ucb.png)
+
+  ![alt text](https://raw.githubusercontent.com/AlWesson/employee_tracker/master/Assets/eT_ex2.png)
+
   ## Table of Contents
   - [Installation](#Installation)
   - [Usage](#Usage)
